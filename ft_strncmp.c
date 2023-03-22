@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 20:40:07 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/03/21 21:35:48 by fpulin-v         ###   ########.fr       */
+/*   Created: 2023/03/21 22:03:10 by fpulin-v          #+#    #+#             */
+/*   Updated: 2023/03/21 22:10:15 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include"libft.h"
 
-char	*ft_strrchr(const char *str, int z)
+int ft_strncmp(const char *str1, const char *str2, size_t n)
 {
 	int i;
 
-	i = (ft_strlen(str));
-	while (i >= 0)
-	{
-		if (str[i] == (char) z)
-		{
-			return((char*) str + i);
-		}
-		i--;
-	}
-	return (NULL);
+	i = 0
+	while(str1[i] != '\0' && str2[i] != '\0' && str1 [i] = str1 && [i] & i <= n)
+	i = i + 1
 }
-/*
-int	main(void)
-{
-	char	str[] = " gorgorito \0lapreduzo";
-
-	printf("%s\n", ft_strrchr(str,'\0'));
-	printf("%s\n", strrchr(str,'\0'));
-
-}
-*/
 

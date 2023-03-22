@@ -1,29 +1,27 @@
-#include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *cadena, int character_buscado)
+char	*ft_strchr(const char *str, int z)
 {
 	int i;
 
 	i = 0;
-	while (cadena[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (cadena[i] == (char) character_buscado)
-			return ((char*) cadena);
+		if (str[i] == (char) z)
+			return ((char*) str + i);
 		i++;
 	}
-	if (cadena[i] == '\0')
-		return ((char*) cadena)
+	if (z == '\0')
+		return ((char*) str + i);
 	return (NULL);
 }
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-
+/*
 int	main(void)
 {
-	const char	cadena []= "caricatura roja";
+	const char	str []= "caricatura roja";
 
-	printf("%c\n", *ft_strchr(cadena, 'j'));
-	printf("%c\n", *strchr(cadena, 'a'));
+	printf("%s\n", ft_strchr(str, 'h'));
+	printf("%s\n", strchr(str, 'h'));
 	return (0);
 }
+*/
