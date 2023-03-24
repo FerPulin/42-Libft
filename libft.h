@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 17:18:16 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/03/23 17:10:45 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/03/24 11:48:27 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_strchr(const char *str, int z);
 int ft_strncmp(const char *str1, const char *str2, size_t n);
 int	ft_toupper(int b);
 int	ft_tolower(int b);
+void	*ft_memset(void *s, int c, size_t n);
 
 
 #endif
