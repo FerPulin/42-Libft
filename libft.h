@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 17:18:16 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/03/24 17:01:17 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/03/28 21:18:56 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,11 @@ int ft_strncmp(const char *str1, const char *str2, size_t n);
 int	ft_toupper(int b);
 int	ft_tolower(int b);
 void	*ft_memset(void *s, int c, size_t n);
-void	ft_memcpy(void *dst, const void *src, size_t n);
-
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
+void	ft_bzero(void *s, size_t n);
+int		ft_atoi(const char *str);
 
 #endif
