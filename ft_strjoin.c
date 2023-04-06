@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 19:10:36 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/05 19:51:02 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/06 21:31:27 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,4 @@ Tras crear el string "s3" reserva un espacio de memoria, usando malloc,
 La funcion devuelve NULL si malloc falla en la reserva de memoria.
 if (s2 == NULL)
 		return (NULL);
+*/

@@ -6,10 +6,11 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 01:42:57 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/06 02:16:28 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/06 20:53:58 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
@@ -44,7 +45,7 @@ int	main(void)
 	ft_putnbr_fd(n, fd);
 	return (0);
 }
-
+*/
 /*
 #include <stdio.h>
 #include <unistd.h>

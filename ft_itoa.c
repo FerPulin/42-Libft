@@ -6,10 +6,12 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 02:21:26 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/06 02:27:42 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/06 20:54:32 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+/*
 #include"libft.h"
 
 nt	len(long nb)
@@ -61,3 +63,4 @@ int	main(void)
 {
 	printf("%s\n", ft_itoa(1342345));
 }
+*/

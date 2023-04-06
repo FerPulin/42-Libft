@@ -6,14 +6,14 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 19:53:26 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/05 20:01:42 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/06 20:52:06 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*#include "libft.h"
 
 char *ft_strtrim(char const *s1, char const *set)
 {
 
-	
-}
+
+}*/
