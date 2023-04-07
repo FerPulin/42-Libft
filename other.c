@@ -1,48 +1,64 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   other.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 02:21:26 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/07 17:37:17 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/07 13:09:43 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-char	*ft_itoa(int n)
+#include"libft.h"
+
+nt	len(long nb)
 {
-	char	str*;
-	
+	int	len = 0;
+	if (nb < 0)
+	{
+		nb *= -1;
+		len++;
+	}
+	while (nb > 0)
+	{
+		nb /= 10;
+		len++;
+	}
+	return(len);
+}
+char	*ft_itoa(int nb)
+{
+	char	*str;
+	long	n;
+	int	i;
 
-	if (n == -2147483648)
+	n = nb;
+	i = len(n);
+	if(!(str = (char *)malloc(i + 1)))
+		return(0);
+	str[i--] = '\0';
+	if (n == 0)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_itoa(147483648);
+		str[0] = 48;
+		return(str);
 	}
-	else if (n < 0)
+	if(n < 0)
 	{
-		ft_putchar('-');
-		nb = -nb;
-		ft_itoa(nb);
+		str[0] = '-';
+		n *= -1;
 	}
-	else if (n > 9)
+	while (n > 0)
 	{
-		ft_itoa(n / 10);
-		ft_putchar((n % 10) + 48);
+		str[i] = 48 + (n % 10);
+		n /= 10;
+		i--;
 	}
-	else
-		 ft_putchar(n + 48);
+	return (str);
 }
 
 int	main(void)
 {
-	int n = 2735;
-	int	fd = open ("Archivo_salida_ft_putnbr.txt", O_WRONLY | O_CREAT, 0644);
-
-	ft_itoa_fd(nb);
-	return (0);
-
+	printf("%s\n", ft_itoa(1342345));
+}
