@@ -6,16 +6,14 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 02:21:26 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/07 21:31:14 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/08 13:23:39 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-char	*ft_book(int n)
+static int	ft_len(int n)
 {
-	char	*str;
 	int	count;
 
 	if (n < 1)
@@ -27,42 +25,50 @@ char	*ft_book(int n)
 		count = count + 1;
 		n = n / 10;
 	}
-	str = malloc(count * sizeof(char));
-	if(s2 == NULL)
-		return(NULL);
-	return (*str)
+	return (count);
 }
 	char	*ft_itoa(int n)
 {
-	ft_book(n);
+	char	*str;
+	int	i;
+	int	len;
 
-
+	len = ft_len(n);
+	str = malloc(len * sizeof(char));
+	if(str == NULL)
+		return(NULL);
+	i = len - 2;
+	str[len - 1] = '\0';
+	if (n == 0)
+	{
+		str[0] = 48;
+		return(str);
+	}
 	if (n == -2147483648)
 	{
 		str[0] = '-';
 		str[1] = '2';
-		ft_itoa(147483648);
+		n = 147483648;
 	}
-	else if (n < 0)
+	if(n < 0)
 	{
 		str[0] = '-';
-		n = -n;
-		ft_itoa(n);
+		n = n * -1;
 	}
-	else if (n > 9)
+	while (n > 0)
 	{
-		ft_itoa(n / 10);
-		str ((n % 10) + 48);
+		str[i] = 48 + (n % 10);
+		n = n / 10;
+		i--;
 	}
-	else
-		 ft_putchar(n + 48);
+	return (str);
 }
-
+/*
 int	main(void)
 {
-	int n = 2735;
-	int	fd = open ("Archivo_salida_ft_putnbr.txt", O_WRONLY | O_CREAT, 0644);
-
-	ft_itoa_fd(nb);
-	return (0);
-
+	printf("%s\n", ft_itoa(0));
+    printf("%s\n", ft_itoa(123456));
+    printf("%s\n", ft_itoa(-123456));
+    printf("%s\n", ft_itoa(-2147483648));
+}
+*/
