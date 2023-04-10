@@ -6,11 +6,12 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 02:21:26 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/08 13:23:39 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/10 13:44:29 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+static char *ft_convert(int n, int i, char *str);
 
 static int	ft_len(int n)
 {
@@ -39,6 +40,11 @@ static int	ft_len(int n)
 		return(NULL);
 	i = len - 2;
 	str[len - 1] = '\0';
+	return(ft_convert(n, i, str));
+	//return (str);
+}
+static char *ft_convert(int n, int i, char *str)
+{
 	if (n == 0)
 	{
 		str[0] = 48;
@@ -63,7 +69,7 @@ static int	ft_len(int n)
 	}
 	return (str);
 }
-/*
+
 int	main(void)
 {
 	printf("%s\n", ft_itoa(0));
@@ -71,4 +77,4 @@ int	main(void)
     printf("%s\n", ft_itoa(-123456));
     printf("%s\n", ft_itoa(-2147483648));
 }
-*/
+
