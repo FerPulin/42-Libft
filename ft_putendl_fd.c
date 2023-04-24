@@ -6,16 +6,26 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 13:59:09 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/05 14:17:20 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 21:33:27 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+This function writes an string and a line break in a file. The function recieves
+the string pointed by "char *s" and the file with the "int fd".
+
+In main we are creating or opening the file, giving autorization, calling the
+function and closing the file afterwards.
+*/
+
 #include "libft.h"
 
+void	ft_putendl_fd(char *s, int fd);
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -28,15 +38,10 @@ void ft_putendl_fd(char *s, int fd)
 int	main(void)
 {
 	char	str[] = "Hola Caracola";
-	int	fd = open ("Archivo_salida_string_end_line_test.txt", O_WRONLY | O_CREAT, 0644);
+	int	fd = open ("Archivo_salida_string_end_line_test.txt",
+		O_WRONLY | O_CREAT, 0644);
 	ft_putendl_fd(str, fd);
 	close (fd);
 	return (0);
 }
-*/
-/*
-Esta funcion lo que hace es escribir en un fichero un string. El string me lo indica
-char *s y el fichero se indica con el int fd. Y a continuación un salto de linea.
-En el main estamos creando o abriendo el fichero, dandole autorizaciones, llamando la
-función y cerrando despues el fichero.
 */

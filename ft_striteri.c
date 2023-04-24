@@ -6,15 +6,28 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 21:39:13 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/06 22:27:39 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 12:28:19 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+This function receives an string pointed by char "*s" and also receives a
+function "char (*f) (Unsigned int, char*)" that is used to determine the
+values to be asigned to the original pointer "*s", replacing the previous
+values. The function returns "s".
+
+The string "s" and the function to be used to replace its values it is
+determined in the main. The function called will use a position whitin
+the  "*s" pointer to identify the character and an int that will be the
+index value of the pointer "*s" where is that character.
+*/
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -22,7 +35,6 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 		f(i, &s[i]);
 		i++;
 	}
-
 }
 
 /*
@@ -37,21 +49,8 @@ int	main(void)
 	char	*p;
 	p = ft_strdup(str);
 	ft_striteri(p, ft_sub_strmapi);
-	printf("%s\n", p);
+	printf("The result of ft_striteri for abcdefghijklmn is: %s\n", p);
 	free(p);
 	return (0);
 }
-*/
-/*
-Esta funcion recibe un string al que apunta un puntero char "*s"
-y una función "char (*f)(unsigned int, char*)" que se use para
-determinar los valores a ser asignados al puntero original "*s".
-
- Al llamar la funcion desde el main determinas el string "s" que
- va a usar y la funcion que queremos que se use para reemplazar es
- string "s".
-
- La funcion a la que se llama usara una posicion dentro de un puntero
-  char para identificar el caracter  y un int que sera el valor del
-  indice de ese puntero "*s" en el que esta ese caracter.
 */

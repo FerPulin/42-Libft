@@ -6,16 +6,27 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 22:03:10 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/03/24 13:15:05 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 21:34:31 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+This function compares the first n characters of two strings pointed by *str1
+and *str2. If all n characters are the same, the functions returns 0. If any
+of the n characters are different, the function will retur a positive number
+if adding the characters of the string pointed by *str1 result in a number
+bigger than the ones in the string pointed by *str2, or negative if the
+oposite. Characters afer '\0' character, are not compared.
+*/
+
 #include"libft.h"
+
+int	ft_strncmp(const char *str1, const char *str2, size_t n);
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	while (i < n && (str1 [i] || str2 [i]))
 	{
@@ -28,26 +39,10 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 /*
 int	main(void)
 {
-	printf("%d\n", strncmp( "Hola", "Holccfgyny", 5));
-	printf("%d", ft_strncmp( "Hola", "Holccfgyny", 5));
+	printf("The result of strncmp is: %d\n", strncmp( "Hola",
+	 "Holacfgyny", 4));
+	printf("The result of ft_strncmp is: %d\n", ft_strncmp( "Hola",
+	 "Holacfgyny", 4));
 	return (0);
 }
-*/
-
-/*
-	size_t i;
-
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (str1 [i] == str2 [i] && i - 1 < n)
-		i++;
-	if ((str1 [i] - str2 [i]) > 0)
-		return (1);
-	else if ((str1 [i] - str2 [i]) < 0)
-		return (-1);
-	else
-		return (0);
-
-	size_t i;
 */

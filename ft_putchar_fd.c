@@ -6,11 +6,22 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 12:13:49 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/05 13:20:43 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 12:39:01 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+This function writes a character in a file. The function recieves the character
+"char c" and the file with the "int fd". The function does this and end ups
+pointing to the following position.
+
+In main we are creating or opening the file, giving autorization, calling the
+function and closing the file afterwards.
+*/
+
 #include"libft.h"
+
+void	ft_putchar_fd(char c, int fd);
 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -26,11 +37,4 @@ int	main(void)
 	close (fd);
 	return (0);
 }
-*/
-/*
-Esta funcion lo que hace es escribir en un fichero un caracter. El caracter me lo indica
-char c y el fichero se indica con el int fd.
-Hace esto y apunta a la siguiente posición.
-En el main estamos creando o abriendo el fichero, dandole autorizaciones, llamando la
-función y cerrando despues el fichero.
 */

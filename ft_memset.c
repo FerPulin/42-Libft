@@ -6,11 +6,20 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 17:35:53 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/03/27 20:19:36 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 12:39:23 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+     The function writes "n" bytes of value "c" (converted to an
+	 unsigned char) to the string "s", and returns its first argument.
+
+	 La funcion escribe "n" veces el valor "c" en string "s" y devuelve
+	 su primer argumento
+*/
 #include"libft.h"
+
+void	*ft_memset(void *s, int c, size_t n);
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -19,12 +28,22 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char*) s)[i] = (unsigned char) c;
+		((unsigned char *) s)[i] = (unsigned char) c;
 		i++;
 	}
 	return (s);
 }
 /*
+int	main(void)
+{
+	char buffer[50];
+	char buffer2[50];
+
+	printf("%s\n", memset(buffer, '8', 6));
+	printf("%s\n", ft_memset(buffer2, '8', 6));
+	return (0);
+}
+
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*str;
@@ -41,16 +60,4 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (str);
 }
-
-int	main(void)
-{
-	char buffer[50];
-	char buffer2[50];
-
-	//memset(buffer, '8', 6);
-	printf("%s\n", memset(buffer, '8', 6));
-	printf("%s\n", ft_memset(buffer2, '8', 6));
-	return (0);
-}
 */
-

@@ -6,11 +6,19 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 01:42:57 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/07 12:45:14 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/24 13:05:29 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+This function converts a given int "nb" into a char that is written inside a
+given file "fd". In this version we call ft_putchar_fd to include the resulting
+char in the file.
+*/
+
 #include "libft.h"
+
+void	ft_putnbr_fd(int nb, int fd);
 
 void	ft_putnbr_fd(int nb, int fd)
 {
@@ -32,7 +40,7 @@ void	ft_putnbr_fd(int nb, int fd)
 		ft_putchar_fd((nb % 10) + 48, fd);
 	}
 	else
-		 ft_putchar_fd(nb + 48, fd);
+		ft_putchar_fd(nb + 48, fd);
 }
 /*
 int	main(void)
@@ -44,16 +52,9 @@ int	main(void)
 	return (0);
 }
 */
-
 /*
-Esta funcion lo que hace es convertir un int en un char que se escribe dentro
-de un fichero. En esta funcion llamamos a la ft_putchar_fd para incluir el char
-resultante dentro del fichero.
-*/
-
-/*
-A continuación tengo una versión de esta función incluyendo en la propia
- funcion, la impresión sin llamar a ft_putchar_fd (work in progress).
+The following is a version of the function including the file writting
+without the need to call ft_putchar_fd. (work in progress).
 
 #include "libft.h"
 
