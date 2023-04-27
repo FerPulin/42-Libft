@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 13:54:26 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/24 21:31:12 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/04/25 16:36:28 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*
 int	main(void)
 {
-	char str[] = "Hola caracola";
+	char strx[] = "Hola caracola";
 	char *ptr1;
 	char *ptr2;
-	ptr1 = ft_memchr(str, 'c', 10);
-	ptr2 = memchr(str, 'c', 10);
+	ptr1 = ft_memchr(strx, 'c', 10);
+	ptr2 = memchr(strx, 'c', 10);
 	printf("The ft_memchr found the character at post (null if -): %ld.\n",
-		ptr1 - str);
+		ptr1 - strx);
 	printf("The memchr found the character at posit (null if-): %ld.\n",
-		ptr2 - str);
+		ptr2 - strx);
 	return(0);
 }
 */
