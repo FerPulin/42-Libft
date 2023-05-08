@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:50:15 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/05/05 12:21:28 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/05/08 17:14:29 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	j = dst_len;
 	if (dst_len < dstsize -1 && dstsize > 0)
 	{
-		while (dst_len + i < dstsize - 1)
+		while (dst_len + i < dstsize - 1 && src[i] != '\0')
 		{
 			dst [j] = src [i];
 			j++;
@@ -50,7 +50,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (src_len + dst_len);
 }
 
-int main(void)
+/*int main(void)
 {
 	char dst [20] = "pqrstuvwxyz";
 	char scr [] = "abcdefghijklmnop";
@@ -62,8 +62,9 @@ int main(void)
 	printf("The result of the ft_strlcat is: %lu\n", ft_strlcat(dst, scr, sizeof(dst)));
 	printf("The concatenated string with ft_strlcat is: %s\n", dst);
 	printf("The source string was: %s\n", scr1);
-	printf("The destination string string was: %s\n", dst1);
+	printf("The destination string was: %s\n", dst1);
 	printf("The result of the srtcat is: %lu\n", strlcat(dst1 , scr1, sizeof(dst)));
 	printf("The concatenated string with strlcat is: %s\n", dst1);
-}
+}*/
+
 
