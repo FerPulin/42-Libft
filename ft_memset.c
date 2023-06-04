@@ -6,16 +6,13 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 17:35:53 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/24 12:39:23 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/06/03 11:38:33 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
      The function writes "n" bytes of value "c" (converted to an
 	 unsigned char) to the string "s", and returns its first argument.
-
-	 La funcion escribe "n" veces el valor "c" en string "s" y devuelve
-	 su primer argumento
 */
 #include"libft.h"
 

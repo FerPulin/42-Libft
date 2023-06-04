@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:47:03 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/24 12:31:09 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/06/03 13:03:18 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,13 @@ int	ft_isascii(int c)
 /*
 int	main(void)
 {
-	printf("180 es un ASCII:? %d\n", ft_isascii(180));
-	printf("180 es un ASCII:? %d\n", ft_isascii(180));
-	printf("127 es un ASCII:? %d\n", isascii(127));
-	printf("127 es un ASCII:? %d\n", ft_isascii(127));
+	int a1 = 180
+	int a2 = 127
+
+	printf("c% is an ASCII? %d\n:", a1, ft_isascii(a1));
+	printf("c% is an ASCII? %d\n:", a2, ft_isascii(a2));
+	printf("c% is an ASCII? %d\n:", a1, isascii(a1));
+	printf("c% is an ASCII? %d\n:", a2, isascii(a2));
+	return(0)
 }
 */

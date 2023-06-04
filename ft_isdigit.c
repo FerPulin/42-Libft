@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:05:52 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/24 11:46:35 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/06/03 13:11:17 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,13 @@ int	ft_isdigit(int c)
 /*
 int main(void)
 {
-	printf("4 is a decimal digit:? %d\n", ft_isdigit('4'));
-	printf("A is a decimal digit:? %d\n", ft_isdigit('A'));
-	printf("4 is a decimal digit:? %d\n", isdigit('4'));
-	printf("A is a decimal digit:? %d\n", isdigit('A'));
+	int a1 = '4'
+	int a2 = 'A'
+
+	printf("c% is a decimal? %d\n:", a1, ft_isdigit(a1));
+	printf("c% is a decimal? %d\n:", a2, ft_isdigit(a2));
+	printf("c% is a decimal? %d\n:", a1, isdigit(a1));
+	printf("c% is a decimal? %d\n:", a2, isdigit(a2));
+	return(0)
 }
 */

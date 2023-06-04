@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:42:27 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/24 12:00:30 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/06/03 12:52:25 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,13 @@ int	ft_isalnum(int c)
 /*
 int	main(void)
 {
-	printf("; is alpha o numeric:? %d\n", ft_isalnum(';'));
-	printf("A is alpha o numeric:? %d\n", ft_isalnum('A'));
-	printf("; is alpha o numeric:? %d\n", isalnum(';'));
-	printf("A is alpha o numeric:? %d\n", isalnum('A'));
+	int a1 = 'A';
+	int a2 = ';';
+
+	printf("%c is Alphanumeric?: %d\n", a1, ft_isalnum(a1));
+	printf("%c is Alphanumeric?: %d\n", a2, ft_isalnum(a2));
+	printf("%c is Alphanumeric?: %d\n", a1, isalnum(a1));
+	printf("%c is Alphanumeric?: %d\n", a2, isalnum(a2));
+	return(0);
 }
 */

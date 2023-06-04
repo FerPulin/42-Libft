@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 23:09:09 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/05/09 12:34:29 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:08:47 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,64 +17,97 @@
  function will return the resulting array or a Null if the memory booking
  failes.
  */
+#include "libft.h"
 
+static int	count_words(char const *s, char c);
 
-char **split(const char *str, const char *delim)
+static int	count_words(char const *s, char c)
 {
-    char **tokens = NULL;
-    int count = 0;
+	int	words;
 
-    // Copiar la cadena a tokenizar a una variable local para no modificarla
-    char *str_copy = strdup(str);
-
-    // Inicializar los punteros a la primera posición de la cadena a tokenizar y al delimitador
-    char *token = str_copy;
-    char *delim_pos = strchr(str_copy, *delim);
-
-    // Contar la cantidad de tokens
-    while (delim_pos)
+	words = 0;
+	while (*s)
 	{
-        count++;
-        token = delim_pos + 1;
-        delim_pos = strchr(token, *delim);
-    }
-
-    // Asignar memoria para el arreglo de tokens
-    tokens = malloc((count + 1) * sizeof(char *));
-
-    // Reinicializar los punteros a la primera posición de la cadena a tokenizar y al delimitador
-    token = str_copy;
-    delim_pos = strchr(str_copy, *delim);
-    count = 0;
-
-    // Rellenar el arreglo de tokens
-    while (delim_pos)
-	{
-        *delim_pos = '\0';
-        tokens[count++] = strdup(token);
-        token = delim_pos + 1;
-        delim_pos = strchr(token, *delim);
-    }
-    tokens[count++] = strdup(token);
-    tokens[count] = NULL;
-
-    // Liberar la memoria asignada para la cadena temporal
-    free(str_copy);
-
-    return (tokens);
+		if (*s != c)
+		{
+			words++;
+			while (*s && *s != c)
+				s++;
+		}
+		else
+			s++;
+	}
+	return (words);
 }
-int main(void)
+
+static int	get_word_len(char const *s, char c)
 {
-    char *str = "Hola mundo, esto es una prueba";
-    char **tokens = split(str, ' ');
+	int	len;
 
-    int i = 0;
-    while (tokens[i] != NULL) {
-        printf("Token %d: %s\n", i, tokens[i]);
-        free(tokens[i]);
-        i++;
-    }
-    free(tokens);
-
-    return (0);
+	len = 0;
+	while (*s && *s != c)
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
+
+char	**fill_arr(char const *s, char c, char **arr)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			arr[i] = (char *)malloc(sizeof(char) * (get_word_len(s, c) + 1));
+			if (!arr[i])
+				return (NULL);
+			j = 0;
+			while (*s && *s != c)
+				arr[i][j++] = *s++;
+			arr[i][j] = '\0';
+			i++;
+		}
+		else
+			s++;
+	}
+	arr[i] = NULL;
+	return (arr);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	int		words;
+
+	if (!s)
+		return (NULL);
+	words = count_words(s, c);
+	arr = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!arr)
+		return (NULL);
+	arr = fill_arr(s, c, arr);
+	return (arr);
+}
+
+//int	main(void)
+//{
+//	char *s = "Hola como estás, mi nombre es Fer";
+//	char **str = ft_split(s, ' ');
+//
+//	if (str == NULL)
+//	{
+//		printf("Error: no se pudo asignar memoria.\n");
+//		return (1);
+//	}
+//	for (int i = 0; str[i] != NULL; i++)
+//		printf("%s\n", str[i]);
+//	for (int i = 0; str[i] != NULL; i++)
+//		free(str[i]);
+//	free(str);
+//	return (0);
+//}

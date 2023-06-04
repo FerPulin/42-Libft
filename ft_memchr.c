@@ -6,7 +6,7 @@
 /*   By: fpulin-v <fpulin-v@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 13:54:26 by fpulin-v          #+#    #+#             */
-/*   Updated: 2023/04/25 16:36:28 by fpulin-v         ###   ########.fr       */
+/*   Updated: 2023/06/04 18:46:13 by fpulin-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(void)
 	ptr2 = memchr(strx, 'c', 10);
 	printf("The ft_memchr found the character at post (null if -): %ld.\n",
 		ptr1 - strx);
-	printf("The memchr found the character at posit (null if-): %ld.\n",
+	printf("The memchr found the character at post (null if-): %ld.\n",
 		ptr2 - strx);
 	return(0);
 }
